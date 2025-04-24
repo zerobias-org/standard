@@ -1,0 +1,48 @@
+{
+  "name": "@zerobias-org/standard-us-nara-v19",
+  "version": "1.0.0-rc.0",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "@zerobias-org/standard-us-nara-v19",
+      "version": "1.0.0-rc.0",
+      "license": "ISC",
+      "dependencies": {
+        "@auditlogic/suite-us-nara": "latest"
+      }
+    },
+    "node_modules/@auditlogic/suite-us-nara": {
+      "version": "1.0.1",
+      "resolved": "https://pkg.zerobias.org/@auditlogic/suite-us-nara/-/227d3bc85d0ea34fdc8ce0f54c879b6005b5c12a",
+      "integrity": "sha512-lHPObgf28LbV4gYNbDI77XTtvBJt7k7fEci8+Iv57gpWHHBDOS6tezGLTL9eSeTAAf1r1rAhuLRXRacP+IRmgw==",
+      "dependencies": {
+        "@auditlogic/vendor-us": "^1.0.0"
+      }
+    },
+    "node_modules/@auditlogic/vendor-us": {
+      "version": "1.0.0",
+      "resolved": "https://pkg.zerobias.org/@auditlogic/vendor-us/-/cc8467fd58f27d54fb7ceefa396c487fc2ddd069",
+      "integrity": "sha512-9UL7eIkh7123USn+VpfYtK9Es3PL23JkbXd+Zn/ijCIqDgRXkKgFqhHcDR4qWoDvOK+IywXylVP8ntKAFqAXMA==",
+      "engines": {
+        "node": ">=16.11.0",
+        "npm": ">=8.0.0"
+      }
+    }
+  },
+  "dependencies": {
+    "@auditlogic/suite-us-nara": {
+      "version": "1.0.1",
+      "resolved": "https://pkg.zerobias.org/@auditlogic/suite-us-nara/-/227d3bc85d0ea34fdc8ce0f54c879b6005b5c12a",
+      "integrity": "sha512-lHPObgf28LbV4gYNbDI77XTtvBJt7k7fEci8+Iv57gpWHHBDOS6tezGLTL9eSeTAAf1r1rAhuLRXRacP+IRmgw==",
+      "requires": {
+        "@auditlogic/vendor-us": "^1.0.0"
+      }
+    },
+    "@auditlogic/vendor-us": {
+      "version": "1.0.0",
+      "resolved": "https://pkg.zerobias.org/@auditlogic/vendor-us/-/cc8467fd58f27d54fb7ceefa396c487fc2ddd069",
+      "integrity": "sha512-9UL7eIkh7123USn+VpfYtK9Es3PL23JkbXd+Zn/ijCIqDgRXkKgFqhHcDR4qWoDvOK+IywXylVP8ntKAFqAXMA=="
+    }
+  }
+}

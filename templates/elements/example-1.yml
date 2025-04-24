@@ -1,0 +1,6 @@
+id: {id}
+name: {name}
+description: {description}
+elementType: {elementType}
+externalId: {externalId}
+aliases: []

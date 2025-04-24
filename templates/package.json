@@ -1,0 +1,32 @@
+{
+  "name": "@zerobias-org/{type}-{vendor}-{suite}-{version}",
+  "version": "1.0.0-rc.0",
+  "description": "{standardName}",
+  "author": "team@zerobias.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zerobias-org/standard.git",
+    "directory": "package/{type}/{vendor}/{suite}/{version}/"
+  },
+  "scripts": {
+    "nx:publish": "../../../scripts/publish.sh",
+    "nx:prepublish": "../../../scripts/prepublish.sh",
+    "validate": "ts-node ../../../scripts/validate.ts"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "index.yml",
+    "logo.svg"
+  ],
+  "auditmation": {
+    "dataloader-version": "3.29.26",
+    "import-artifact": "{type}",
+    "package": "{vendor}.{suite}.{version}.{type}"
+  },
+  "dependencies": {
+    "@auditlogic/vendor-zerobias": "latest"
+  }
+}

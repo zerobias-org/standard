@@ -1,0 +1,15 @@
+id: {id}
+name: {name}
+description: {description}
+standardType: {type}
+code: {code}
+externalId: {externalId}
+url: {url}
+version: {version}
+status: approved
+external: true
+internal: true
+elementTypes: []
+mappingTypes: [] # This is used for framework/benchmark standards to denote which element types are considered mappable
+tags: []
+aliases: []

@@ -1,0 +1,24 @@
+id: 486dae36-5c21-451a-bde6-b8c0678736e8
+name: The Constitution of the United States
+description: We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.
+standardType: law
+code: us_nara_v19
+externalId: US Constitution
+url: https://www.archives.gov/founding-docs/constitution
+version: v19
+status: approved
+elementTypes:
+  - id: d9a372e0-ef0a-4526-8456-c89e0ccf0dc2
+    code: article
+    name: Article
+    description: Article
+  - id: ef7ede77-304c-46b2-a685-c816105f31c0
+    code: amendment
+    name: Amendment
+    description: Amendment
+  - id: f10efd1e-f02a-4ed5-a312-cf2cc0acd1a0
+    code: section
+    name: Section
+    description: Section
+tags: []
+aliases: []
