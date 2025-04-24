@@ -1,0 +1,23 @@
+{
+  "name": "@zerobias-org/standard-bundle",
+  "version": "0.0.1",
+  "description": "All installable standards",
+  "author": "team@auditmation.io",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zerobias-org/standard.git",
+    "directory": "bundle/"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "auditmation": {
+    "package": "bundle.all-standards",
+    "import-artifact": "bundle",
+    "dataloader-version": "0.5.4"
+  },
+  "dependencies": {
+    "@zerobias-org/standard-us-nara-v19": "1.0.0"
+  }
+}
