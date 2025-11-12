@@ -1,12 +1,12 @@
 {
   "name": "@zerobias-org/standard-bundle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "@zerobias-org/standard-bundle",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "license": "ISC",
       "dependencies": {
         "@zerobias-org/standard-us-nara-v19": "1.0.0"
