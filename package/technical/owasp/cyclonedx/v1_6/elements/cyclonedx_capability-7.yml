@@ -1,0 +1,10 @@
+id: 8ac7ec3c-0628-4f9f-91e4-644fce6a81ad
+name: Manufacturing Bill of Materials (MBOM)
+description: The Formulation or Manufacturing Bill of Materials (MBOM) provides comprehensive
+  recipes of how a particular software system was created, trained, or deployed. This
+  formulation information helps enhance transparency by enabling stakeholders to understand
+  the development and deployment process, empowering them to evaluate the system's
+  reliability, security, and potential risks associated with its formulation.
+elementType: cyclonedx_capability
+externalId: MBOM
+aliases: []

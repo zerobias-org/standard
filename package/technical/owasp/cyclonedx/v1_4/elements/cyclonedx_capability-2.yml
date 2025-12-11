@@ -1,0 +1,10 @@
+id: f46ea719-5866-4ce3-a665-fdd204b0a28c
+name: Vulnerability Exploitability Exchange (VEX)
+description: Support for Vulnerability Exploitability Exchange (VEX) to communicate
+  the exploitability status of known vulnerabilities in software components. Works
+  with SBOMs, forming a comprehensive view of possible risk. Together, the combination
+  of SBOM and VEX can significantly reduce the efforts and costs associated with vulnerability
+  management.
+elementType: cyclonedx_capability
+externalId: VEX
+aliases: []

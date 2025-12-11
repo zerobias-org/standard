@@ -1,0 +1,10 @@
+id: efb7c095-28aa-4dd3-b965-6152a572038e
+name: Machine Learning Bill of Materials (ML-BOM)
+description: Machine Learning Bill of Materials (ML-BOM) represents a developer-friendly
+  advancement in BOM technology. With ML-BOM, CycloneDX provides insights into the
+  machine learning models utilized in software systems. This transparency allows stakeholders
+  to understand and verify the training and deployment methods employed, ensuring
+  accountability and promoting ethical artificial intelligence (AI) practices.
+elementType: cyclonedx_capability
+externalId: ML-BOM
+aliases: []

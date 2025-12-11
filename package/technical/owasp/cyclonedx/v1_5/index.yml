@@ -1,0 +1,30 @@
+id: 9417c3ae-3f71-4eba-bda8-6fc36efc1cd3
+name: OWASP CycloneDX v1.5
+description: Bill of Materials (BOM) specification. CycloneDX v1.5 brings an advanced
+  Bill of Materials Standard empowering transparency, security, and compliance. Incorporates
+  Machine Learning transparency (ML-BOM), Formulation (MBOM), and enhanced support
+  for SBOM quality indicators including evidence and lifecycles. Released on June
+  26, 2023.
+standardType: technical
+standardCategory: technical
+code: owasp_cyclonedx_v1_5
+externalId: CycloneDX v1.5
+url: https://cyclonedx.org/docs/1.5/json/
+version: v1.5
+status: approved
+external: true
+internal: false
+elementTypes:
+  - id: 9d498358-d53f-4057-a598-fd628df8a987
+    code: standard
+    name: Standard
+    description: This element type denotes the whole standard to be used for linking
+      purposes
+  - id: aa478737-2697-40c6-a177-2a8a3e2988d9
+    code: cyclonedx_capability
+    name: CycloneDX Capability
+    description: This element type denotes a CycloneDX capability
+mappingTypes:
+  - cyclonedx_capability
+tags: []
+aliases: []

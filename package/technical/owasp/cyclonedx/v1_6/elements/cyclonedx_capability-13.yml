@@ -1,0 +1,15 @@
+id: cc343cda-76f9-432f-954b-41ff39920000
+name: Cryptography Bill of Materials (CBOM)
+description: Cryptography Bill of Materials (CBOM), developed by researchers and software
+  engineers at IBM, serves as a structured framework for inventorying cryptographic
+  assets. This approach is detailed in OMB M-23-02 and is particularly focused on
+  preparing for the transition to post-quantum cryptography (PQC). This preparation
+  is underlined by the issuance of National Security Memorandum 10 from the White
+  House. Simplifies the discovery, management, and reporting of cryptographic assets,
+  laying the groundwork for migration to quantum-safe systems and applications. Facilitates
+  the identification of weak cryptographic algorithms, promotes cryptographic agility,
+  and ensures compliance with evolving cryptographic policies and advisories like
+  CNSA 2.0, aligning with recommendations from NIST.
+elementType: cyclonedx_capability
+externalId: CBOM
+aliases: []

@@ -1,0 +1,10 @@
+id: 01755856-6047-492a-9605-28a246f08bea
+name: CycloneDX Attestations (CDXA)
+description: CycloneDX Attestations (CDXA) are a modern capability for security compliance.
+  They enable organizations to communicate standards, claims, and evidence in support
+  of requirements, along with attestations to the veracity and completeness of those
+  claims. CDXA makes compliance as code possible with machine-readable security standards
+  and compliance documentation, instead of endless PDFs, spreadsheets, and paper evidence.
+elementType: cyclonedx_capability
+externalId: CDXA
+aliases: []

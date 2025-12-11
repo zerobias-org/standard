@@ -1,0 +1,12 @@
+id: de09bf90-3f78-4ada-9263-53f111e3534c
+name: Vulnerability Disclosure Report (VDR)
+description: Support for Vulnerability Disclosure Report (VDR) to facilitate vulnerability
+  disclosure across different parties, such as in bug bounty programs or coordinated
+  disclosure efforts with external researchers. Internally, VDRs can streamline vulnerability
+  management by optimizing remediation efforts and enabling clear communication between
+  security, development, and operations teams. This capability aligns with international
+  standards such as ISO/IEC 29147:2018. VDRs are also known as Vulnerability Advisory
+  Reports (VAR).
+elementType: cyclonedx_capability
+externalId: VDR
+aliases: []

@@ -1,0 +1,7 @@
+id: 58ec809c-2003-4a7a-a778-af0626463a70
+name: Ecma Standardization, 1st Edition
+description: CycloneDX has been ratified as ECMA-424, 1st Edition by Ecma International
+  in June 2024.
+elementType: cyclonedx_capability
+externalId: ECMA-424 (Edition 1)
+aliases: []

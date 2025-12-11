@@ -1,0 +1,10 @@
+id: d3cf4e0a-a30e-471a-9de8-afbc98160eec
+name: Operations Bill of Materials (OBOM)
+description: Operations Bill of Materials (OBOM) provides a structured way to represent
+  the runtime environment of applications. Captures configurations, runtime environments,
+  and dependencies in production systems; provides insights into staging, deployment,
+  and operational states; bridges the gap between development and operations teams;
+  supports risk assessments for live and evolving systems.
+elementType: cyclonedx_capability
+externalId: OBOM
+aliases: []

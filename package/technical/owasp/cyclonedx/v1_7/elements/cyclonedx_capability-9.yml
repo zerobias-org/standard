@@ -1,0 +1,10 @@
+id: a9c8ce8d-dc92-4b02-b5c7-b39b86f24505
+name: Software as a Service Bill of Materials (SaaSBOM)
+description: Software as a Service Bill of Materials (SaaSBOM) provides a standardized
+  way to represent critical details about cloud-native systems. Represents endpoints,
+  data flows, and dependencies within cloud-native services; aligns with Infrastructure-as-Code
+  and microservices architectures; captures data classification and directional flow
+  between services; identifies risks such as misconfigurations and insecure APIs.
+elementType: cyclonedx_capability
+externalId: SaaSBOM
+aliases: []

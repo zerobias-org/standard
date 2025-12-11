@@ -1,0 +1,31 @@
+{
+  "name": "@zerobias-org/standard-owasp-cyclonedx-v1_6",
+  "version": "1.2.0-rc.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "@zerobias-org/standard-owasp-cyclonedx-v1_6",
+      "version": "1.2.0-rc.0",
+      "license": "ISC",
+      "dependencies": {
+        "@auditlogic/suite-owasp-cyclonedx": "latest"
+      }
+    },
+    "node_modules/@auditlogic/suite-owasp-cyclonedx": {
+      "version": "1.0.0",
+      "resolved": "https://pkg.zerobias.org/@auditlogic/suite-owasp-cyclonedx/-/ce096b03dee9e1037c152b5d8a1abfc6c201ac05",
+      "integrity": "sha512-oSxA+Rhnh+jlJFkKmxv9Z3byXoXNMk2H4PnU47VoZQPfwUjsuJBdOuHxe4NotbNz3qEYE3wNCE2QTkPi0i6dbA==",
+      "license": "ISC",
+      "dependencies": {
+        "@auditlogic/vendor-owasp": "^1.0.1"
+      }
+    },
+    "node_modules/@auditlogic/vendor-owasp": {
+      "version": "1.0.1",
+      "resolved": "https://pkg.zerobias.org/@auditlogic/vendor-owasp/-/9ad3b0a1874717385c417ec12767b76ed55ae69c",
+      "integrity": "sha512-MOeo5WNAmSdAomUONbvYjRf0gn0oaRQDlX6MOP3UQrr/7XB1+LcxQ1xG35HffrS6eS2/o0I1zEMPrTUSOhxSQw==",
+      "license": "ISC"
+    }
+  }
+}

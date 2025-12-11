@@ -1,0 +1,29 @@
+id: ac578621-4892-4abb-8c4e-95ac9cccd79f
+name: OWASP CycloneDX v1.4
+description: Bill of Materials (BOM) specification. CycloneDX v1.4 expands SBOM capabilities,
+  accelerating innovation and supply chain risk reduction. Adds support for Vulnerability
+  Exploitability Exchange (VEX), release notes, and improved support for hardware
+  devices. Released on January 12, 2022.
+standardType: technical
+standardCategory: technical
+code: owasp_cyclonedx_v1_4
+externalId: CycloneDX v1.4
+url: https://cyclonedx.org/docs/1.4/json/
+version: v1.4
+status: approved
+external: true
+internal: false
+elementTypes:
+  - id: 7943ad53-700e-481e-991c-83ac1d6f4915
+    code: standard
+    name: Standard
+    description: This element type denotes the whole standard to be used for linking
+      purposes
+  - id: ae595294-f92a-4b51-b232-6b92bb57a00c
+    code: cyclonedx_capability
+    name: CycloneDX Capability
+    description: This element type denotes a CycloneDX capability
+mappingTypes:
+  - cyclonedx_capability
+tags: []
+aliases: []

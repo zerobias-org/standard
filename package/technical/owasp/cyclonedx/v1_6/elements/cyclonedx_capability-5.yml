@@ -1,0 +1,14 @@
+id: 7b379c8f-1927-463d-9b8e-24a3889a7e4f
+name: Bill of Vulnerabilities (BOV)
+description: Bill of Vulnerabilities (BOV) is a standardized way to exchange vulnerability
+  information between systems, enabling organizations to share complex vulnerability
+  data effectively. By focusing on a machine-readable format, BOV simplifies the communication
+  of vulnerability metadata such as severities, risk ratings, and remediation details.
+  Fully compatible with CycloneDX BOMs for holistic supply chain risk management.
+  A BOV provides granular, machine-readable data, while a VDR is the formal, human-readable
+  report derived from that data. BOVs catalogue everything found; VDRs report on what's
+  relevant and addressed for customers. BOV is for systems and automation; VDR is
+  for customers, partners, and internal teams.
+elementType: cyclonedx_capability
+externalId: BOV
+aliases: []
