@@ -42,7 +42,7 @@ standard/
 
 ## File Format Reference
 
-**Source of Truth:** `../../auditmation/platform/dataloader/src/processors/standard/`
+**Source of Truth:** `../../com/platform/dataloader/src/processors/standard/`
 
 **Expected Structure:**
 - `index.yml` - Standard metadata (name, version, type, description)
@@ -74,7 +74,7 @@ Formal documents with referenceable elements:
 ## Integration with Platform
 
 ### Dataloader Integration
-**Handler Location:** `../../auditmation/platform/dataloader/src/processors/standard/`
+**Handler Location:** `../../com/platform/dataloader/src/processors/standard/`
 **Database Tables:**
 - `catalog.standard` - Standard metadata
 - `catalog.element` - Individual requirements/test cases
@@ -90,7 +90,7 @@ Formal documents with referenceable elements:
 - **[Root CLAUDE.md](../../CLAUDE.md)** - Meta-repo guidance
 - **[ContentArtifacts.md](../../ContentArtifacts.md)** - Content catalog system
 - **[auditlogic/standard/CLAUDE.md](../../auditlogic/standard/CLAUDE.md)** - Proprietary standards (same pattern)
-- **[auditmation/platform/dataloader/CLAUDE.md](../../auditmation/platform/dataloader/CLAUDE.md)** - Dataloader processor
+- **[com/platform/dataloader/CLAUDE.md](../../com/platform/dataloader/CLAUDE.md)** - Dataloader processor
 - **[zerobias-org/crosswalk/CLAUDE.md](../crosswalk/CLAUDE.md)** - Framework mappings
 - **[zerobias-org/framework/CLAUDE.md](../framework/CLAUDE.md)** - Community frameworks
 
