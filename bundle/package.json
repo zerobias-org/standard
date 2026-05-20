@@ -1,6 +1,6 @@
 {
   "name": "@zerobias-org/standard-bundle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "All installable standards",
   "author": "team@auditmation.io",
   "license": "ISC",
@@ -18,6 +18,6 @@
     "dataloader-version": "0.5.4"
   },
   "dependencies": {
-    "@zerobias-org/standard-us-nara-v19": "1.0.0"
+    "@zerobias-org/standard-us-nara-v19": "2.0.0"
   }
 }
