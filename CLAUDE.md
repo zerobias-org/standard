@@ -1,129 +1,68 @@
-# CLAUDE.md - Community Standard Repository
+# CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with standard content in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Repository Overview
 
-This is the **ZeroBias Community Standard Repository** containing open-source compliance standards (frameworks and benchmarks). Standards define formal documents with referenceable elements like requirements, test cases, and technical specifications.
+Monorepo of ZeroBias **standard** artifacts — formal documents with referenceable elements (requirements, articles, controls). Each `package/<type>/<vendor>/<suite>/<version>/` directory is one publishable standard package (e.g. `law/us/nara/v19` = The US Constitution).
 
-**Repository Role:** Community-contributed compliance frameworks, benchmarks, and formal standards
+The repo is on the **gradle + [zbb publish reusable workflow](https://github.com/zerobias-org/devops/blob/main/.github/workflows/zbb-publish-reusable.yml)** pipeline. Lerna and nx were removed in the migration. Sibling reference repos on the same pattern: `org/vendor`, `org/suite`, `org/product`, `org/framework`.
 
-This repository follows the same structure as `auditlogic/standard` but contains community-contributed, open-source standards.
+## Development Commands
 
-## Current Status
+```bash
+# File-shape validation only:
+./gradlew :<type>:<vendor>:<suite>:<version>:validateContent
 
-⚠️ **AI-Assisted Development Workflows Needed**
+# Full gate — validate → buildArtifacts → testIntegrationDataloader → writeGateStamp:
+./gradlew :<type>:<vendor>:<suite>:<version>:gate
 
-This CLAUDE.md is a placeholder. Comprehensive AI-assisted development workflows for creating and maintaining standards are planned but not yet implemented.
-
-**What's Needed:**
-- Step-by-step workflows for creating new standards
-- Element structuring and organization
-- Validation procedures
-- Publishing and versioning guidelines
-- Framework vs benchmark distinction
-- Integration with crosswalks
-
-## Repository Structure
-
-```
-standard/
-├── package/zerobias/          # Community standard packages
-│   └── <standard-name>/       # Individual standard
-│       ├── package.json       # NPM package configuration
-│       ├── index.yml          # Standard metadata
-│       ├── elements.yml       # Requirements/test cases/elements
-│       ├── CHANGELOG.md       # Version history
-│       └── npm-shrinkwrap.json
-├── scripts/                   # Creation and validation scripts
-├── lerna.json                 # Monorepo configuration
-└── README.md
+# Repo-wide cross-cut: fail if two yml files share an id UUID
+./gradlew validateUniqueIds
 ```
 
-## File Format Reference
+`gate` writes `package/<path>/gate-stamp.json` (publish preflight requires it). `testIntegrationDataloader` runs against an ephemeral Neon branch; skipped locally without `NEON_*` env, re-run in CI.
 
-**Source of Truth:** `../../auditmation/platform/dataloader/src/processors/standard/`
+## Package Structure & Naming
 
-**Expected Structure:**
-- `index.yml` - Standard metadata (name, version, type, description)
-- `elements.yml` - Elements (requirements for frameworks, test cases for benchmarks)
-- `package.json` - Must include `auditmation.import-artifact: "standard"`
+Standards are **depth 4** with a dropped category segment:
 
-## Standard Types
+| Path | Sample | npm name | `zerobias.package` |
+|---|---|---|---|
+| `package/<type>/<vendor>/<suite>/<version>/` | `law/us/nara/v19` | `@zerobias-org/standard-<vendor>-<suite>-<version>` | `<vendor>.<suite>.<version>.standard` |
 
-### Framework
-Non-prescriptive requirements defining WHAT must be done:
-- NIST Cybersecurity Framework
-- ISO 27001
-- SOC 2
-- HIPAA
-- PCI DSS
+**The leading `<type>` (category, e.g. `law`) is part of the directory but DROPPED from the npm name and `zerobias.package`** (source: `scripts/createNewStandard.sh`). The `.standard` suffix on `zerobias.package` disambiguates artifact type. Dots in a version segment normalize to underscores for `zerobias.package`.
 
-### Benchmark
-Prescriptive test cases defining HOW to achieve compliance:
-- CIS Benchmarks
-- DISA STIGs
-- Custom security baselines
+### Required files per package
+- `index.yml` — standard metadata (id, name, code, externalId, version, elementTypes)
+- `elements/<code>.yml` — one yaml per requirement/article (each with a unique `id`)
+- `package.json` — `files` must include `index.yml` + `elements/**`
+- `.npmrc`, `build.gradle.kts` (`plugins { id("zb.content") }`), `gate-stamp.json`
 
-### Other Standards
-Formal documents with referenceable elements:
-- Technical specifications
-- Policies and procedures
-- Industry guidelines
+## Validator philosophy
 
-## Integration with Platform
+The dataloader is the source of truth for schema rules. The gate validator (`build.gradle.kts`) only enforces what the dataloader can't see: (1) filesystem ↔ npm-name ↔ `zerobias.package` triangulation (with the category drop), and (2) repo-wide unique `id` UUIDs across `index.yml` + every `elements/*.yml`.
 
-### Dataloader Integration
-**Handler Location:** `../../auditmation/platform/dataloader/src/processors/standard/`
-**Database Tables:**
-- `catalog.standard` - Standard metadata
-- `catalog.element` - Individual requirements/test cases
+## Creating / migrating packages
 
-### Usage in Platform
-- **Audit Framework Selection:** Choose which standards apply to audit
-- **Requirement Mapping:** Link evidence to standard elements
-- **Crosswalks:** Map requirements between standards
-- **Gap Analysis:** Identify unmapped requirements
+- New standard: `sh scripts/createNewStandard.sh <type> <vendor> <suite> <version>`, then fill `index.yml` + `elements/`, drop the `zb.content` marker, `./gradlew :path:gate`.
+- Migrating remaining lerna-era packages: `/migrate-packages` (see `.claude/skills/migrate-packages/SKILL.md`).
+
+## Community vs Proprietary
+
+This is the **public** (`@zerobias-org`) standards repo — anyone can see it. Proprietary/protected standards live in `auditlogic/*` (password-gated) and **stay there**; only standards not already in auditlogic start here. Never move auditlogic content into this repo.
+
+## Branches & commits
+
+- `main` is canonical; `dev`/`qa`/`uat` kept in sync downstream by the publish workflow.
+- [Conventional Commits](https://www.conventionalcommits.org/), enforced by commitlint (husky `commit-msg` hook). Scope: `standard-<vendor>-<suite>-<version>`.
+
+## CI/CD
+
+`.github/workflows/publish.yml` wraps `zerobias-org/devops/.github/workflows/zbb-publish-reusable.yml@main` (detect → version → publish matrix → update-bundle → sync). Pre-release validation on a branch: `gh workflow run publish.yml --ref <branch>`.
 
 ## Related Documentation
 
-- **[Root CLAUDE.md](../../CLAUDE.md)** - Meta-repo guidance
-- **[ContentArtifacts.md](../../ContentArtifacts.md)** - Content catalog system
-- **[auditlogic/standard/CLAUDE.md](../../auditlogic/standard/CLAUDE.md)** - Proprietary standards (same pattern)
-- **[auditmation/platform/dataloader/CLAUDE.md](../../auditmation/platform/dataloader/CLAUDE.md)** - Dataloader processor
-- **[zerobias-org/crosswalk/CLAUDE.md](../crosswalk/CLAUDE.md)** - Framework mappings
-- **[zerobias-org/framework/CLAUDE.md](../framework/CLAUDE.md)** - Community frameworks
-
-## Important Notes
-
-### Community vs Proprietary
-
-**This Repository (zerobias-org/standard):**
-- Open-source, community-contributed standards
-- Public GitHub repository
-- MIT/Apache license
-- Community validation
-
-**Proprietary Repository (auditlogic/standard):**
-- Closed-source, professionally validated standards
-- Private GitHub repository
-- Commercial license
-- Expert review
-
-Both follow identical structure and use same dataloader processor.
-
-## Future Development
-
-Once AI-assisted development workflows are implemented, this CLAUDE.md will include:
-- Creating new framework from template
-- Defining requirements and elements
-- Validation and testing procedures
-- Publishing to NPM registry
-- Updating standards when regulations change
-- Integration with crosswalks and benchmarks
-
----
-
-**Last Updated:** 2025-11-11
-**Maintainers:** ZeroBias Community
-
+- [Root CLAUDE.md](../../CLAUDE.md) — meta-repo guidance
+- [org/framework/CLAUDE.md](../framework/CLAUDE.md) — sibling, frameworks reference standards
+- [com/platform/dataloader/CLAUDE.md](../../com/platform/dataloader/CLAUDE.md) — StandardIndexFileHandler is the dataloader source of truth

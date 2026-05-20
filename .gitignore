@@ -83,3 +83,10 @@ image/**/package-lock.json
 dbz-config.json
 
 scripts/clean**
+# Gradle / zbb
+build/
+.gradle
+.zbb-monorepo/
+.zbb-gradle/
+gradle-local.properties
+!gradle/wrapper/gradle-wrapper.jar
