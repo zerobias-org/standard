@@ -1,19 +1,27 @@
-name: Publish
+name: Publish Standard
+
 on:
-  workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [main, qa, dev, uat]
+    paths:
+      - 'package/**'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+    inputs:
+      standard:
+        description: 'Standard to publish (e.g. law/us/nara/v19). Leave blank for all changed.'
+        required: false
 
 permissions:
   contents: write
-  id-token: write
   packages: write
-  pull-requests: write
+  id-token: write
 
 jobs:
   publish:
-    uses: zerobias-org/devops/.github/workflows/publish-reusable.yml@main
-    secrets: inherit
+    uses: zerobias-org/devops/.github/workflows/zbb-publish-reusable.yml@main
     with:
-      skip-publish-announcement: 'false'
+      ghcr-namespace: zerobias-org
+      dispatch-input-name: standard
+      dispatch-input-value: ${{ inputs.standard }}
+    secrets: inherit
