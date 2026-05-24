@@ -1,0 +1,12 @@
+id: a4959163-2771-4fae-8038-fa5dcd66df6f
+name: Hardware Bill of Materials (HBOM)
+description: Hardware Bill of Materials (HBOM) represents hardware devices within
+  a Bill of Materials (BOM). This allows for a more comprehensive view of the entire
+  system, encompassing both software and hardware components. Captures detailed inventories
+  of physical hardware components and associated firmware; bridges gaps between software
+  and hardware security practices; represents configurations and dependencies for
+  IoT, embedded, and industrial systems; supports compliance with safety and regulatory
+  standards.
+elementType: cyclonedx_capability
+externalId: HBOM
+aliases: []

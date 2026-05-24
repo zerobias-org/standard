@@ -1,0 +1,8 @@
+id: 4a55a53e-81b2-4549-8930-0a3e89b0c029
+name: SBOM Quality Indicators
+description: Enhanced support for SBOM quality indicators, including evidence and
+  lifecycles, to improve the reliability and trustworthiness of Software Bill of Materials
+  (SBOM) data.
+elementType: cyclonedx_capability
+externalId: SBOM Quality Indicators
+aliases: []

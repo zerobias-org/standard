@@ -1,0 +1,10 @@
+id: 9e40e541-79bc-477d-aca1-e562d818b8f6
+name: Vulnerability Disclosure Report (VDR) Enhanced
+description: Vulnerability Disclosure Report (VDR) Enhanced introduces a focused vulnerability-assertion
+  external reference type specifically for VDRs, detailing known and unknown vulnerabilities
+  and their impact. Allows tools to link to VDRs (like those from Apache Log4j) using
+  this new external reference, providing customers and users with direct access to
+  vulnerability findings and analysis.
+elementType: cyclonedx_capability
+externalId: VDR Enhanced
+aliases: []

@@ -1,0 +1,29 @@
+id: f6200e37-7bd0-51f1-9998-cc730a8482ef
+name: OWASP CycloneDX v1.6
+description: Bill of Materials (BOM) specification. CycloneDX v1.6 advances Software
+  Supply Chain Security with Cryptographic Bill of Materials and attestations. Builds
+  upon a legacy of innovation, empowering organizations to reduce risk and enhance
+  software and system transparency. Released on April 09, 2024.
+standardType: technical
+standardCategory: technical
+code: owasp_cyclonedx_v1_6
+externalId: CycloneDX v1.6
+url: https://cyclonedx.org/docs/1.6/json/
+version: v1.6
+status: approved
+external: true
+internal: false
+elementTypes:
+  - id: c70a5b5f-4900-51d0-a1de-576a5b5b89a2
+    code: standard
+    name: Standard
+    description: This element type denotes the whole standard to be used for linking
+      purposes
+  - id: 9ef360d6-36db-4956-8287-e4094ac08f10
+    code: cyclonedx_capability
+    name: CycloneDX Capability
+    description: This element type denotes a CycloneDX capability
+mappingTypes:
+  - cyclonedx_capability
+tags: []
+aliases: []

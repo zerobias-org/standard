@@ -1,0 +1,8 @@
+id: 7b981ebb-63e4-42b7-8eab-240208ef0f02
+name: Advanced License Support
+description: Advanced License Support helps minimize legal risks and strengthen the
+  overall software ecosystem. Encompasses opensource licenses for OpenChain conformance
+  and commercial license support for enterprise SAM use cases.
+elementType: cyclonedx_capability
+externalId: Advanced License Support
+aliases: []

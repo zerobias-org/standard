@@ -1,0 +1,11 @@
+id: 59efc0e9-4fba-4fe5-b5b9-1111d0889824
+name: Cryptography Bill of Materials (CBOM) Enhanced
+description: Cryptography Bill of Materials (CBOM) Enhanced further improves the management
+  and reporting of cryptographic assets in preparation for post-quantum cryptography
+  (PQC) transitions. Includes a standardized list of cryptographic algorithm families,
+  enabling consistent identification and classification across ecosystems, and a comprehensive
+  list of elliptic curves, supporting audits, compliance reviews, and PQC readiness
+  assessments.
+elementType: cyclonedx_capability
+externalId: CBOM Enhanced
+aliases: []

@@ -1,0 +1,9 @@
+id: 82d6e9d0-3cc9-4746-84f3-85cd49c00b6f
+name: Software Bill of Materials (SBOM)
+description: Comprehensive generation and management of Software Bill of Materials
+  (SBOM) to enhance transparency and security in the software supply chain. Exceeds
+  the Minimum Elements for Software Bill of Materials as defined by the National Telecommunications
+  and Information Administration (NTIA).
+elementType: cyclonedx_capability
+externalId: SBOM
+aliases: []

@@ -1,0 +1,10 @@
+id: 8a54993d-2701-442a-ab52-4262ca58f2f7
+name: Intellectual Property Transparency
+description: Support for patents and patent families. Allows BOMs to express not only
+  the components in use but also the intellectual property rights and obligations
+  that apply to them, whether for compliance tracking, risk analysis, or acquisition
+  due diligence. It marks a key step forward in aligning SBOMs with legal and business
+  realities.
+elementType: cyclonedx_capability
+externalId: Intellectual Property Transparency
+aliases: []

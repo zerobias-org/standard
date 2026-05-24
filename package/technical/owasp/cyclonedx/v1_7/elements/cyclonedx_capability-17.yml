@@ -1,0 +1,13 @@
+id: 825da084-3c2b-454e-a627-ff436c1f99d1
+name: Citations
+description: In complex software environments, SBOMs are rarely produced in a single
+  step. They are often enriched across multiple tools, transformed through CI/CD pipelines,
+  or assembled from partial data over time. Without proper attribution, tracking the
+  origin and integrity of information becomes increasingly difficult. Citations provide
+  a formal mechanism to declare where information came from, how it was generated,
+  and who is responsible for it. This enables verifiable chains of provenance, ensuring
+  that every enrichment step, external reference, or tool contribution can be traced
+  and audited with confidence.
+elementType: cyclonedx_capability
+externalId: Citations
+aliases: []
