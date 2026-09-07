@@ -1,6 +1,6 @@
 {
   "name": "@zerobias-org/{type}-{vendor}-{suite}-{version}",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0",
   "description": "{standardName}",
   "author": "team@zerobias.com",
   "license": "ISC",
@@ -15,7 +15,7 @@
     "validate": "ts-node ../../../scripts/validate.ts"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://pkg.zerobias.org/"
   },
   "files": [
     "index.yml",
@@ -28,5 +28,8 @@
   },
   "dependencies": {
     "@auditlogic/vendor-zerobias": "latest"
+  },
+  "zerobias": {
+    "orgId": "{target-org-uuid}"
   }
 }
