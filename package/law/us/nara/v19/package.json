@@ -1,13 +1,14 @@
 {
   "name": "@zerobias-org/standard-us-nara-v19",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "The Constitution of the United States law standard artifact.",
   "author": "team@zerobias.com",
   "license": "ISC",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:zerobias-org/standard.git",
-    "directory": "package/standard/us/nara/v19/"
+    "directory": "package/law/us/nara/v19/"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -16,12 +17,12 @@
     "index.yml",
     "elements/**"
   ],
-  "auditmation": {
-    "dataloader-version": "3.29.26",
+  "zerobias": {
+    "package": "us.nara.v19.standard",
     "import-artifact": "standard",
-    "package": "us.nara.v19.standard"
+    "dataloader-version": "1.0.0"
   },
   "dependencies": {
-    "@auditlogic/suite-us-nara": "latest"
+    "@zerobias-org/suite-us-nara": "latest"
   }
 }

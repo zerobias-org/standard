@@ -1,13 +1,12 @@
 {
   "name": "@zerobias-org/standard",
   "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "description": "Zerobias standard artifacts",
   "main": "main.js",
-  "scripts": {
-    "postinstall": "husky install"
-  },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://pkg.zerobias.org"
   },
   "repository": {
     "type": "git",
@@ -20,8 +19,7 @@
   },
   "homepage": "https://github.com/zerobias-org/standard#readme",
   "devDependencies": {
-    "@commitlint/cli": "^12.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
-    "husky": "^5.1.3"
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1"
   }
 }

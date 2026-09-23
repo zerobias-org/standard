@@ -1,7 +1,7 @@
 {
-  "version": "2.0.1",
-  "branch": "chore/bootstrap-gradle-zbb",
-  "sourceHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "version": "2.1.0-uat.0",
+  "branch": "chore/cleanup-legacy-tooling",
+  "sourceHash": "44b60e30bc74b60360f82a4e4ebdc829975ac87cb7009175a3436ff08f1a0b0c",
   "testHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "tasks": {
     "validate": "passed",
