@@ -1,0 +1,27 @@
+{
+  "name": "@zerobias-org/standard-nist-sp-800204d",
+  "version": "3.0.0",
+  "description": "NIST SP 800-204D - Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines",
+  "author": "team@zerobias.com",
+  "license": "ISC",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zerobias-org/standard.git",
+    "directory": "package/guidance/nist/sp/800204d/"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "index.yml"
+  ],
+  "zerobias": {
+    "package": "nist.sp.800204d.standard",
+    "import-artifact": "standard",
+    "dataloader-version": "1.0.0"
+  },
+  "dependencies": {
+    "@zerobias-org/suite-nist-sp": "latest"
+  }
+}
