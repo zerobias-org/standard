@@ -1,6 +1,6 @@
 {
   "name": "@zerobias-org/standard-bundle",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "All installable standards",
   "author": "team@auditmation.io",
   "license": "ISC",
@@ -22,6 +22,6 @@
     "@zerobias-org/standard-nist-fips-1403": "3.0.0",
     "@zerobias-org/standard-nist-fips-199": "3.0.0",
     "@zerobias-org/standard-nist-sp-800204d": "3.0.0",
-    "@zerobias-org/standard-us-nara-v19": "2.0.1"
+    "@zerobias-org/standard-us-nara-v19": "2.1.0"
   }
 }
