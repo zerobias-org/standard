@@ -1,0 +1,15 @@
+id: bc68e959-9851-46a1-b695-d16b05e5464c
+name: NIST FIPS 199
+description: Standard for categorizing federal information and information systems by the potential impact
+  on an organization's operations, assets, or individuals, rated low, moderate, or high for each of confidentiality,
+  integrity, and availability, should that information or system be compromised through unauthorized access,
+  use, disclosure, disruption, modification, or destruction.
+code: nist_fips_199
+externalId: FIPS 199
+url: https://csrc.nist.gov/pubs/fips/199/final
+version: '2004'
+releaseDate: '2004-02-01'
+status: approved
+source: NIST
+standardType: technical
+taskId: ec96ad17-e9e6-4db7-8ef4-2bb1b628c2cf

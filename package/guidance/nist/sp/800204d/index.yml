@@ -1,0 +1,16 @@
+id: 6bd0fd2c-558d-4b62-8fa7-a969ac3865a9
+name: NIST SP 800-204D
+description: Strategies for integrating software supply chain security into the DevSecOps CI/CD pipelines
+  used to build and deliver cloud-native, microservices-based applications, covering the build, test,
+  package, and deploy stages that take source code through the software supply chain to a new release.
+code: nist_sp_800204d
+externalId: SP 800-204D
+url: https://csrc.nist.gov/pubs/sp/800/204/d/final
+version: '2024'
+releaseDate: '2024-02-12'
+status: approved
+source: NIST
+standardType: guidance
+aliases:
+- sp_800_204d
+taskId: d61f039f-28fe-457b-82e2-9a0a4287e431

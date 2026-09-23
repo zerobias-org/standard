@@ -1,0 +1,27 @@
+{
+  "name": "@zerobias-org/standard-nist-fips-199",
+  "version": "3.0.0",
+  "description": "NIST FIPS 199 - Standards for Security Categorization of Federal Information and Information Systems",
+  "author": "team@zerobias.com",
+  "license": "ISC",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zerobias-org/standard.git",
+    "directory": "package/technical/nist/fips/199/"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "index.yml"
+  ],
+  "zerobias": {
+    "package": "nist.fips.199.standard",
+    "import-artifact": "standard",
+    "dataloader-version": "1.0.0"
+  },
+  "dependencies": {
+    "@zerobias-org/suite-nist-fips": "latest"
+  }
+}
