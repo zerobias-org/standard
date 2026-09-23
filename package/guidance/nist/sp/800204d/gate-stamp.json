@@ -1,0 +1,21 @@
+{
+  "version": "3.0.0-uat.0",
+  "branch": "feat/relocate-nist-standards-public",
+  "sourceHash": "69c90c5c269c71b7c88dc9e3c2b3c61fce102dc7136d1cfd42f0739a0666af6c",
+  "testHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "tasks": {
+    "validate": "passed",
+    "lint": "passed",
+    "compile": "passed",
+    "test": "passed",
+    "testDirect": "passed",
+    "testDocker": "passed",
+    "testDataloader": "passed",
+    "buildArtifacts": "passed"
+  },
+  "tests": {
+      "unit": { "expected": 0, "ran": 0, "status": "skipped" },
+      "integration": { "expected": 0, "ran": 0, "status": "skipped" },
+      "e2e": { "expected": 0, "ran": 0, "status": "skipped" }
+  }
+}
