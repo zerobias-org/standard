@@ -1,39 +1,53 @@
-#! /bin/sh
-
-set -x 
+#!/bin/sh
+# Scaffold a new standard package:
+#   package/<standard_type>/<vendor>/<suite>/<version>/
+#
+# <standard_type> is the index.yml standardType (law, technical, guidance, ...)
+# and doubles as the category folder. It is dropped from the package identity:
+#   npm name          @zerobias-org/standard-<vendor>-<suite>-<version>
+#   zerobias.package  <vendor>.<suite>.<version>.standard   (dots in <version> → _)
+#   code              <vendor>_<suite>_<version>            (same normalization)
+# which is exactly what build.gradle.kts's validator derives from the path.
+set -eu
 
 if [ $# -lt 4 ]; then
-    echo "Usage: $0 <standard_type> <vendor> <suite> <version>"
-    exit 1
+  echo "Usage: $0 <standard_type> <vendor> <suite> <version>"
+  exit 1
 fi
 
-BASE_DIR=$(dirname $0)
+BASE_DIR=$(cd "$(dirname "$0")/.." && pwd)
 TYPE=$1
 VENDOR=$2
 SUITE=$3
 VERSION=$4
-CODE="$2\_$3\_$4"
-FOLDER_PATH="$BASE_DIR/../package/$TYPE/$VENDOR/$SUITE/$VERSION"
+PKG_VERSION=$(printf '%s' "$VERSION" | tr '.' '_')
+CODE="${VENDOR}_${SUITE}_${PKG_VERSION}"
+FOLDER_PATH="$BASE_DIR/package/$TYPE/$VENDOR/$SUITE/$VERSION"
 
-if [ ! -d "$FOLDER_PATH" ]; then
-  echo "Creating folder $FOLDER_PATH."
-  mkdir -p $FOLDER_PATH
+if [ -e "$FOLDER_PATH" ]; then
+  echo "$FOLDER_PATH already exists."
+  exit 1
 fi
+mkdir -p "$FOLDER_PATH"
 
-PACKAGE_TYPE=$TYPE
-if [ $TYPE != "framework" ] && [ $TYPE != "benchmark" ]; then
-  PACKAGE_TYPE=standard
-fi
+# `cp -R dir/.` copies dotfiles (.npmrc) too, unlike `dir/*`.
+cp -R "$BASE_DIR/templates/." "$FOLDER_PATH"
 
-cp -r $BASE_DIR/../templates/* $FOLDER_PATH
-cp  $BASE_DIR/../.npmrc $FOLDER_PATH
+# Portable in-place substitution (BSD and GNU sed disagree on `-i`).
+fill() {
+  file=$1; shift
+  tmp="$file.tmp"
+  sed "$@" "$file" > "$tmp" && mv "$tmp" "$file"
+}
 
-sed -i "s/{type}/$PACKAGE_TYPE/g" $FOLDER_PATH/package.json
-sed -i "s/{vendor}/$VENDOR/g" $FOLDER_PATH/package.json
-sed -i "s/{suite}/$SUITE/g" $FOLDER_PATH/package.json
-sed -i "s/{version}/$VERSION/g" $FOLDER_PATH/package.json
+fill "$FOLDER_PATH/package.json" \
+  -e "s/{type}/$TYPE/g" -e "s/{vendor}/$VENDOR/g" -e "s/{suite}/$SUITE/g" \
+  -e "s/\.{version}\.standard/.$PKG_VERSION.standard/" -e "s/{version}/$VERSION/g"
 
-UUID=$(uuidgen)
-sed -i "s/{id}/$UUID/g" $FOLDER_PATH/index.yml
-sed -i "s/{type}/$TYPE/g" $FOLDER_PATH/index.yml
-sed -i "s/{code}/$CODE/g" $FOLDER_PATH/index.yml
+UUID=$(uuidgen | tr '[:upper:]' '[:lower:]')
+fill "$FOLDER_PATH/index.yml" \
+  -e "s/{id}/$UUID/g" -e "s/{type}/$TYPE/g" -e "s/{code}/$CODE/g"
+
+echo "Created $FOLDER_PATH"
+echo "Next: fill the remaining {placeholders} in index.yml and package.json, add elements/, then run"
+echo "  ./gradlew :$TYPE:$VENDOR:$SUITE:$VERSION:gate"
