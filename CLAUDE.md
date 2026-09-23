@@ -45,17 +45,17 @@ The dataloader is the source of truth for schema rules. The gate validator (`bui
 
 ## Creating / migrating packages
 
-- New standard: `sh scripts/createNewStandard.sh <type> <vendor> <suite> <version>`, then fill `index.yml` + `elements/`, drop the `zb.content` marker, `./gradlew :path:gate`.
-- Migrating remaining lerna-era packages: `/migrate-packages` (see `.claude/skills/migrate-packages/SKILL.md`).
+- New standard: `sh scripts/createNewStandard.sh <type> <vendor> <suite> <version>`, then fill the remaining `{placeholders}` in `index.yml` + `package.json` and add `elements/` (the scaffold already writes `.npmrc` and the `zb.content` marker), `./gradlew :path:gate`.
+- Every package is on the gradle pipeline. `/migrate-packages` (`.claude/skills/migrate-packages/SKILL.md`) is kept only as a reference for the migration.
 
 ## Community vs Proprietary
 
-This is the **public** (`@zerobias-org`) standards repo — anyone can see it. Proprietary/protected standards live in `auditlogic/*` (password-gated) and **stay there**; only standards not already in auditlogic start here. Never move auditlogic content into this repo.
+This is the **public** (`@zerobias-org`) standards repo — anyone can see it. Proprietary or licence-restricted standards live in `auditlogic/*` (password-gated) and **stay there**. Public-domain or openly licensed works (e.g. US Government publications, which are public domain under 17 U.S.C. §105) belong here, and may be relocated from auditlogic by keeping their identity: the same `zerobias.package` code and ids, a higher major version, and then removing the auditlogic source by directory removal only, never a deprecation publish (the deprecate path resolves by package code and would delete the live record). The four NIST standards under `technical/` and `guidance/` moved this way.
 
 ## Branches & commits
 
 - `main` is canonical; `dev`/`qa`/`uat` kept in sync downstream by the publish workflow.
-- [Conventional Commits](https://www.conventionalcommits.org/), enforced by commitlint (husky `commit-msg` hook). Scope: `standard-<vendor>-<suite>-<version>`.
+- [Conventional Commits](https://www.conventionalcommits.org/), validated by commitlint (no git hook is installed). Scope: `standard-<vendor>-<suite>-<version>`.
 
 ## CI/CD
 

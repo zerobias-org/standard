@@ -34,7 +34,7 @@ Standards are depth 4, and the leading `<type>` category segment is **dropped** 
 sh scripts/createNewStandard.sh <type> <vendor> <suite> <version>
 ```
 
-Then fill `index.yml`, add `elements/*.yml`, drop the gradle marker (`echo 'plugins { id("zb.content") }' > package/<type>/<vendor>/<suite>/<version>/build.gradle.kts`), and run `./gradlew :<type>:<vendor>:<suite>:<version>:gate`.
+It writes `index.yml`, `package.json`, `.npmrc`, the `zb.content` gradle marker and an example element. Fill the remaining `{placeholders}`, add `elements/*.yml`, and run `./gradlew :<type>:<vendor>:<suite>:<version>:gate`.
 
 ## Publishing
 
@@ -42,7 +42,7 @@ Then fill `index.yml`, add `elements/*.yml`, drop the gradle marker (`echo 'plug
 
 ## Commit format
 
-[Conventional Commits](https://www.conventionalcommits.org/), enforced by `commitlint` (husky `commit-msg` hook).
+[Conventional Commits](https://www.conventionalcommits.org/), validated by `commitlint` (no git hook is installed).
 
 ```
 feat(standard-<vendor>-<suite>-<version>): short subject
