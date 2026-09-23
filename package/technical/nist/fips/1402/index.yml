@@ -1,0 +1,21 @@
+id: 69e28f29-637a-55f0-9f86-377f96904b61
+name: NIST FIPS 140-2
+description: 'Security requirements for cryptographic modules, defining four increasing, qualitative security
+  levels for a wide range of applications and environments. It covers cryptographic module specification;
+  ports and interfaces; roles, services, and authentication; finite state model; physical security; operational
+  environment; cryptographic key management; electromagnetic interference/electromagnetic compatibility
+  (EMI/EMC); self-tests; design assurance; and mitigation of other attacks. Superseded by FIPS 140-3 in
+  2019. Under the CMVP transition, FIPS 140-2 validations moved to the historical list on September 21,
+  2026: modules on that list may still be purchased and used in existing systems, but should not be selected
+  for new ones.'
+code: nist_fips_1402
+externalId: FIPS 140-2
+url: https://csrc.nist.gov/pubs/fips/140-2/upd2/final
+version: 2002 (Change Notice 2)
+releaseDate: '2002-12-03'
+status: approved
+source: NIST
+standardType: technical
+aliases:
+- fips_1402
+taskId: 03a416ce-4fcf-4de1-a841-0a775b13e513

@@ -1,0 +1,21 @@
+id: 6fe8f7db-437f-4c7f-abc3-50e437c0591b
+name: NIST FIPS 140-3
+description: Security requirements for designing and implementing the cryptographic modules that federal
+  agencies operate, or that are operated for them under contract, defining four increasing, qualitative
+  security levels. It covers cryptographic module specification; cryptographic module interfaces; roles,
+  services, and authentication; software/firmware security; operating environment; physical security;
+  non-invasive security; sensitive security parameter management; self-tests; life-cycle assurance; and
+  mitigation of other attacks. Supersedes FIPS 140-2 and is the basis for current Cryptographic Module
+  Validation Program (CMVP) validations.
+code: nist_fips_1403
+externalId: FIPS 140-3
+url: https://csrc.nist.gov/pubs/fips/140-3/final
+version: '2019'
+releaseDate: '2019-03-22'
+status: approved
+source: NIST
+standardType: technical
+links:
+  supersedes:
+  - nist.fips.1402.standard
+taskId: 4a2ff5ff-b5ed-4676-b8eb-64404142c683

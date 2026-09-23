@@ -1,0 +1,27 @@
+{
+  "name": "@zerobias-org/standard-nist-fips-1403",
+  "version": "3.0.0",
+  "description": "NIST FIPS 140-3 - Security Requirements for Cryptographic Modules",
+  "author": "team@zerobias.com",
+  "license": "ISC",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:zerobias-org/standard.git",
+    "directory": "package/technical/nist/fips/1403/"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "index.yml"
+  ],
+  "zerobias": {
+    "package": "nist.fips.1403.standard",
+    "import-artifact": "standard",
+    "dataloader-version": "1.0.0"
+  },
+  "dependencies": {
+    "@zerobias-org/suite-nist-fips": "latest"
+  }
+}
