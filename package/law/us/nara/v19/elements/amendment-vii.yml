@@ -1,10 +1,7 @@
 id: 67e120d3-a5d3-4375-9486-a0cce8b07d95
 name: Amendment VII
-description: >-
-  In Suits at common law, where the value in controversy shall exceed twenty dollars, the right of trial by jury shall be preserved, and no fact tried by a jury, shall be otherwise re-examined in any Court of the United States, than according to the rules of the common law.
+description: Preserves the right to a jury trial in federal civil suits at common law exceeding twenty dollars in value, and bars re-examining jury findings except under common law rules.
 elementType: amendment
 externalId: Amendment VII
 aliases:
   - Seventh Amendment
-background: >-
-  This amendment was ratified December 15, 1791, and helps form what is known as the "Bill of Rights."
