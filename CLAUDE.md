@@ -56,8 +56,8 @@ Elements (`elements/<code>.yml`) follow the element content rules — canonical 
 
 **Enforced here:** `zb.elementRules=enforce` in `gradle.properties` makes `validateContent` fail
 on any description/background violation (link-shape problems only warn) — effective
-from the build-tools release carrying zerobias-org/util#120; older versions ignore the property. There is no
-`element-rules-baseline.txt` and there should not be one — fix the package instead.
+from the build-tools release carrying zerobias-org/util#120; older versions ignore the property.
+There is no exceptions list: a violating package is fixed, not recorded.
 
 Gate: this repo has no CI gate — run `zbb :<pkg>:gate` locally (dataloader on an ephemeral
 Neon branch) and commit the refreshed `gate-stamp.json`. Versions: bump **minor** by hand in
