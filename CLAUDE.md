@@ -43,6 +43,29 @@ Standards are **depth 4** with a dropped category segment:
 
 The dataloader is the source of truth for schema rules. The gate validator (`build.gradle.kts`) only enforces what the dataloader can't see: (1) filesystem ↔ npm-name ↔ `zerobias.package` triangulation (with the category drop), and (2) repo-wide unique `id` UUIDs across `index.yml` + every `elements/*.yml`.
 
+## Element content rules
+
+Elements (`elements/<code>.yml`) follow the element content rules — canonical reference:
+[docs/ElementContentRules.md](../../docs/ElementContentRules.md) (meta-repo). In short:
+
+- **`description`** — plain text, one line, **under 200 characters**: a summary, not the requirement text.
+- **Full text → `elements/<code>-background.md`**, as markdown that renders (blank lines between
+  paragraphs, `- a.` bullets, 4-space nesting, escaped digit labels).
+- **`links`** aliases must resolve in the **live catalog** — the linker drops misses silently.
+- Retire an element with `deprecate: true`, never by deleting the file.
+
+**Enforced here:** `zb.elementRules=enforce` in `gradle.properties` makes `validateContent` fail
+on any description/background violation (link-shape problems only warn) — effective
+from the build-tools release carrying zerobias-org/util#120; older versions ignore the property.
+There is no exceptions list: a violating package is fixed, not recorded.
+
+Gate: this repo has no CI gate — run `zbb :<pkg>:gate` locally (dataloader on an ephemeral
+Neon branch) and commit the refreshed `gate-stamp.json`. Versions: bump **minor** by hand in
+the fix commit (content change).
+
+To fix a package, use the `fix-element-content` skill (meta-repo `.claude/skills/`), which
+also carries the scripts for surveying, applying and verifying.
+
 ## Creating / migrating packages
 
 - New standard: `sh scripts/createNewStandard.sh <type> <vendor> <suite> <version>`, then fill the remaining `{placeholders}` in `index.yml` + `package.json` and add `elements/` (the scaffold already writes `.npmrc` and the `zb.content` marker), `./gradlew :path:gate`.
