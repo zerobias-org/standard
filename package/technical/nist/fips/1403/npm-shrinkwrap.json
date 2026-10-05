@@ -1,0 +1,29 @@
+{
+  "name": "@zerobias-org/standard-nist-fips-1403",
+  "version": "3.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "@zerobias-org/standard-nist-fips-1403",
+      "version": "3.0.0",
+      "license": "ISC",
+      "dependencies": {
+        "@zerobias-org/suite-nist-fips": "*"
+      }
+    },
+    "node_modules/@zerobias-org/suite-nist-fips": {
+      "version": "2.0.2",
+      "integrity": "sha512-inPEMIxQbnhcI4UjGc/YPfFmWWWzV5ixq/pX141NkdzYevCqhsh79GcUJRMqIuuUiIHNUkc3slIl33vJEPIeow==",
+      "license": "ISC",
+      "dependencies": {
+        "@zerobias-org/vendor-nist": "*"
+      }
+    },
+    "node_modules/@zerobias-org/vendor-nist": {
+      "version": "2.0.1",
+      "integrity": "sha512-NjIQ5u841I/1TAl3W9ogHMYPbywAuofDzibEawFXszvSgXiZ4j2tjIe38JmpHUrws/6wo3ij2TYxBA1GzbQtpw==",
+      "license": "ISC"
+    }
+  }
+}

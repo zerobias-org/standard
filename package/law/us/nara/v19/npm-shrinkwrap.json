@@ -1,0 +1,29 @@
+{
+  "name": "@zerobias-org/standard-us-nara-v19",
+  "version": "2.2.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "@zerobias-org/standard-us-nara-v19",
+      "version": "2.2.0",
+      "license": "ISC",
+      "dependencies": {
+        "@zerobias-org/suite-us-nara": "*"
+      }
+    },
+    "node_modules/@zerobias-org/suite-us-nara": {
+      "version": "2.0.1",
+      "integrity": "sha512-jIgRjBHqQ2kojJfkndKW0IswcJRngJKp+bRhzp11XkO/Ws7dvvf2xDxD8dgUvLiXm0UZp775lnYM2I2dXAcc2A==",
+      "license": "ISC",
+      "dependencies": {
+        "@zerobias-org/vendor-us": "*"
+      }
+    },
+    "node_modules/@zerobias-org/vendor-us": {
+      "version": "2.0.1",
+      "integrity": "sha512-LLUJxtiCgjFtjPfmgMCOHH+hYEZhnaKyeXf+RI9wOMgYKUjnwSMdtM/JOjfN6slf8li93W+B1Ho8d6Ep5FJubw==",
+      "license": "ISC"
+    }
+  }
+}

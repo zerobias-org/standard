@@ -11,10 +11,11 @@
     "directory": "package/technical/nist/fips/1402/"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://pkg.zerobias.org"
   },
   "files": [
-    "index.yml"
+    "index.yml",
+    "npm-shrinkwrap.json"
   ],
   "zerobias": {
     "package": "nist.fips.1402.standard",
@@ -22,6 +23,6 @@
     "dataloader-version": "1.0.0"
   },
   "dependencies": {
-    "@zerobias-org/suite-nist-fips": "latest"
+    "@zerobias-org/suite-nist-fips": "*"
   }
 }
