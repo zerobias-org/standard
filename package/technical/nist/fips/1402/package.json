@@ -1,6 +1,6 @@
 {
   "name": "@zerobias-org/standard-nist-fips-1402",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "NIST FIPS 140-2 - Security Requirements for Cryptographic Modules",
   "author": "team@zerobias.com",
   "license": "ISC",

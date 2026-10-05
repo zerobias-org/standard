@@ -1,6 +1,6 @@
 {
   "name": "@zerobias-org/standard-nist-sp-800204d",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "NIST SP 800-204D - Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines",
   "author": "team@zerobias.com",
   "license": "ISC",

@@ -1,6 +1,6 @@
 {
   "name": "@zerobias-org/standard-nist-fips-199",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "NIST FIPS 199 - Standards for Security Categorization of Federal Information and Information Systems",
   "author": "team@zerobias.com",
   "license": "ISC",
