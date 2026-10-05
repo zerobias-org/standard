@@ -11,7 +11,7 @@
     "directory": "package/{type}/{vendor}/{suite}/{version}/"
   },
   "publishConfig": {
-    "registry": "https://pkg.zerobias.org/"
+    "registry": "https://pkg.zerobias.org"
   },
   "files": [
     "index.yml",

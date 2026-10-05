@@ -11,11 +11,12 @@
     "directory": "package/law/us/nara/v19/"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://pkg.zerobias.org"
   },
   "files": [
     "index.yml",
-    "elements/**"
+    "elements/**",
+    "npm-shrinkwrap.json"
   ],
   "zerobias": {
     "package": "us.nara.v19.standard",
@@ -23,6 +24,6 @@
     "dataloader-version": "1.0.0"
   },
   "dependencies": {
-    "@zerobias-org/suite-us-nara": "latest"
+    "@zerobias-org/suite-us-nara": "*"
   }
 }

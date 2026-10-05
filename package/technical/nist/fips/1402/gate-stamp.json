@@ -1,7 +1,7 @@
 {
   "version": "3.0.0-uat.0",
-  "branch": "feat/relocate-nist-standards-public",
-  "sourceHash": "21881e3b55ac1c99bb4cc537121cb9e6c9e40b6d056b11e9d39617db59af702e",
+  "branch": "build/npmrc-canonical",
+  "sourceHash": "fbd4005fbdbe0fe9caa73095e8de88058f5b466900aa3cb475ffb83737c9a422",
   "testHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "tasks": {
     "validate": "passed",
