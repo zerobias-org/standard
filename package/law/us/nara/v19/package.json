@@ -16,6 +16,7 @@
   "files": [
     "index.yml",
     "elements/**",
+    "images/**",
     "npm-shrinkwrap.json"
   ],
   "zerobias": {

@@ -1,7 +1,7 @@
 {
-  "version": "2.2.1",
-  "branch": "build/npmrc-canonical",
-  "sourceHash": "608536f4bee392ed8638491184d393094a0cb77ac2483b4b62737a941b365374",
+  "version": "2.2.1-uat.0",
+  "branch": "fix/us-constitution-mapping-types",
+  "sourceHash": "a62dc9d7eca57d4c2f1785ecac2483305ec1c790d896d6d21fc0c6648aff61c3",
   "testHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "tasks": {
     "validate": "passed",
@@ -11,7 +11,8 @@
     "testDirect": "passed",
     "testDocker": "passed",
     "testDataloader": "passed",
-    "buildArtifacts": "passed"
+    "buildArtifacts": "passed",
+    "dataloaderExec": "passed"
   },
   "tests": {
       "unit": { "expected": 0, "ran": 0, "status": "skipped" },
