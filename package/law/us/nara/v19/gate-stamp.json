@@ -1,7 +1,7 @@
 {
   "version": "2.2.1-uat.0",
-  "branch": "fix/us-constitution-mapping-types",
-  "sourceHash": "a62dc9d7eca57d4c2f1785ecac2483305ec1c790d896d6d21fc0c6648aff61c3",
+  "branch": "fix/us-constitution-gate-stamp",
+  "sourceHash": "05b8d8f63fb1dc8eb7c780ba282578859e8ad47b7cc6fc2b36277cfdbcbf05d3",
   "testHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "tasks": {
     "validate": "passed",
