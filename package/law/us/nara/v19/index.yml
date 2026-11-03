@@ -20,5 +20,9 @@ elementTypes:
     code: section
     name: Section
     description: Section
+mappingTypes:
+  - article
+  - amendment
+  - section
 tags: []
 aliases: []
